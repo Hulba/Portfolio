@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    TabsComponent,
 
   ],
   imports: [
@@ -18,8 +20,8 @@ import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule } from '@a
     MatMenuModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
-
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

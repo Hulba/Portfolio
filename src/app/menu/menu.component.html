@@ -1,6 +1,8 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click)=openLinkedInProfile()>My LinkedIn Page</button>
-  <button mat-menu-item (click)=openGithubProfile()>My Github Page</button>
-  <button mat-menu-item (click)=openGithubRepos()>My Github Repos</button>
-</mat-menu>
+<div>
+  <button  id="menu" mat-display-4 mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)=openLinkedInProfile()>My LinkedIn Page</button>
+    <button mat-menu-item (click)=openGithubProfile()>My Github Page</button>
+    <button mat-menu-item (click)=openGithubRepos()>My Github Repos</button>
+  </mat-menu>
+</div>
