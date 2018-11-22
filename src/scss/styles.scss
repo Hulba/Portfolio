@@ -1,0 +1,32 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body{
+    margin: 0px;
+    background-color: #426363;
+}
+.btext{
+  position: absolute;
+  width: 100%;
+}
+
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+  height: 100%!important;
+
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-color: #426363;
+    /* background-image: url('./assets/images/background.jpg'); */
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    /* background: url('./assets/images/background.jpg') no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
