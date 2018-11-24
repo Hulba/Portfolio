@@ -171,8 +171,8 @@ var pJS = function(tag_id, params){
 
     
     pJS.canvas.w = pJS.canvas.el.offsetWidth * pJS.canvas.pxratio;
-    pJS.canvas.h = screen.height * 1//pJS.canvas.el.offsetHeight * pJS.canvas.pxratio;
-    // console.log(pJS.canvas.h);
+    pJS.canvas.h = pJS.canvas.el.offsetHeight * pJS.canvas.pxratio;
+    // console.log(pJS.canvas.h);screen.height * 1
     
     pJS.particles.size.value = pJS.tmp.obj.size_value * pJS.canvas.pxratio;
     pJS.particles.size.anim.speed = pJS.tmp.obj.size_anim_speed * pJS.canvas.pxratio;

@@ -26,15 +26,12 @@
 
     #container{
         position: absolute;
+        // z-index: -1;
         // padding:8px;
         // margin-top:5%;
         margin-left:5%;
         margin-right:5%;
         margin-bottom: 0; 
-        // width: 100%;     
-        // height: 100%;
-        // background-color: mat-color($background, background);
-        color: mat-color($foreground, text);
     }
     canvas{
         display:block;
@@ -42,19 +39,18 @@
         height: 100%;
     }
     #particles-js{
+        // position: absolute;
+        // z-index: 0;
         width: 100%;
         height: 100vh;
         background-color: mat-color($background, background);
         color: mat-color($foreground, text);    
-        // background-color: #426363;
-        /* background-image: url('./assets/images/background.jpg'); */
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        /* background: url('./assets/images/background.jpg') no-repeat center center fixed; */
+        background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;
     }
 
 }
