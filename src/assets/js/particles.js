@@ -201,39 +201,40 @@ var pJS = function(tag_id, params){
 
     if(pJS && pJS.interactivity.events.resize){
 
-      window.addEventListener('resize', function(){
-
-          pJS.canvas.w = pJS.canvas.el.offsetWidth;
-          pJS.canvas.h = pJS.canvas.el.offsetHeight; 
-          ///////////////////////////
-          // console.log(pJS.canvas.h);
-
-          /* resize canvas */
-          if(pJS.tmp.retina){
-            pJS.canvas.w *= pJS.canvas.pxratio;
-            pJS.canvas.h *= pJS.canvas.pxratio;
-          }
-
-          pJS.canvas.el.width = pJS.canvas.w;
-          pJS.canvas.el.height = pJS.canvas.h;
-
-          /* repaint canvas on anim disabled */
-          if(!pJS.particles.move.enable){
-            pJS.fn.particlesEmpty();
-            pJS.fn.particlesCreate();
-            pJS.fn.particlesDraw();
-            pJS.fn.vendors.densityAutoParticles();
-          }
-
-        /* density particles enabled */
-        pJS.fn.vendors.densityAutoParticles();
-
-      });
+      window.addEventListener('resize', onResize);
 
     }
 
   };
+  
+  function onResize(){
 
+    pJS.canvas.w = pJS.canvas.el.offsetWidth;
+    pJS.canvas.h = pJS.canvas.el.offsetHeight; 
+    ///////////////////////////
+    // console.log(pJS.canvas.h);
+
+    /* resize canvas */
+    if(pJS.tmp.retina){
+      pJS.canvas.w *= pJS.canvas.pxratio;
+      pJS.canvas.h *= pJS.canvas.pxratio;
+    }
+
+    pJS.canvas.el.width = pJS.canvas.w;
+    pJS.canvas.el.height = pJS.canvas.h;
+
+    /* repaint canvas on anim disabled */
+    if(!pJS.particles.move.enable){
+      pJS.fn.particlesEmpty();
+      pJS.fn.particlesCreate();
+      pJS.fn.particlesDraw();
+      pJS.fn.vendors.densityAutoParticles();
+    }
+
+    /* density particles enabled */
+    pJS.fn.vendors.densityAutoParticles();
+
+  }
 
   pJS.fn.canvasPaint = function(){
     pJS.canvas.ctx.fillRect(0, 0, pJS.canvas.w, pJS.canvas.h);
@@ -1030,8 +1031,6 @@ var pJS = function(tag_id, params){
   pJS.fn.modes.grabParticle = function(p){
 
     if(pJS.interactivity.events.onhover.enable && pJS.interactivity.status == 'mousemove'){
-      // console.log('p.y==', p.y)
-      // console.log('pJS.interactivity.mouse.pos_y==', pJS.interactivity.mouse.pos_y)
       var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
           dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
           dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
@@ -1353,7 +1352,6 @@ var pJS = function(tag_id, params){
 
 
   pJS.fn.vendors.checkBeforeDraw = function(){
-
     // if shape is image
     if(pJS.particles.shape.type == 'image'){
 
@@ -1386,6 +1384,11 @@ var pJS = function(tag_id, params){
     pJS.fn.canvasPaint();
     pJS.fn.particlesCreate();
     pJS.fn.vendors.densityAutoParticles();
+
+    //added check after load //--------------------------------
+    window.onload = ()=>{
+      onResize();
+    }
 
     /* particles.line_linked - convert hex colors to rgb */
     pJS.particles.line_linked.color_rgb_line = hexToRgb(pJS.particles.line_linked.color);
