@@ -1,0 +1,139 @@
+@import '../../node_modules/@angular/material/theming';
+// @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500'; //works
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500'); 
+
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&amp;subset=latin-ext');
+
+
+@include mat-core();
+
+@mixin global-theme($theme){
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    body {
+
+        background-color: mat-color($background, background);
+        color: mat-color($foreground, text);   
+    }
+    h1:hover{
+        font-size: 38px;
+
+    }
+
+    #container{
+        position: absolute;
+        // padding:8px;
+        // margin-top:5%;
+        margin-left:5%;
+        margin-right:5%;
+        margin-bottom: 0; 
+        // width: 100%;     
+        // height: 100%;
+        // background-color: mat-color($background, background);
+        color: mat-color($foreground, text);
+    }
+    canvas{
+        display:block;
+        vertical-align:bottom;
+        height: 100%;
+    }
+    #particles-js{
+        width: 100%;
+        height: 100vh;
+        background-color: mat-color($background, background);
+        color: mat-color($foreground, text);    
+        // background-color: #426363;
+        /* background-image: url('./assets/images/background.jpg'); */
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        /* background: url('./assets/images/background.jpg') no-repeat center center fixed; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+}
+
+$theme-1: mat-dark-theme(
+    mat-palette($mat-purple), 
+    mat-palette($mat-deep-purple),
+    );
+$theme-2: mat-light-theme(
+    mat-palette($mat-blue), 
+    mat-palette($mat-light-blue)
+    );
+
+
+$typography-1: mat-typography-config(
+    $font-family: 'Roboto, monospace',
+    $headline: mat-typography-level(32px, 48px, 500),
+    $body-1: mat-typography-level(28px, 32px, 300),
+    $button: mat-typography-level(28px, 32px, 300),
+    $display-4: mat-typography-level(28px, 32px, 300)
+);
+$typography-2: mat-typography-config(
+    $font-family: 'Roboto Condensed, sans-serif',
+    $headline: mat-typography-level(36px, 52px, 700),
+    $body-1: mat-typography-level(22px, 22px, 300),
+    $button: mat-typography-level(22px, 22px, 300),
+    $display-4: mat-typography-level(22px, 22px, 300)
+);
+
+.theme-1{
+    @include angular-material-theme($theme-1);
+    @include angular-material-typography($typography-1);
+    @include global-theme($theme-1);
+}
+
+.theme-2{
+    @include angular-material-theme($theme-2);
+    @include angular-material-typography($typography-2);
+    @include global-theme($theme-2);
+}
+
+
+// $background: map-get($my-theme-default, background);
+// $background: map_merge($background, (background: $my-background));
+// $my-theme-default: map_merge($my-theme-default, (background: $background));
+
+// $my-theme-light: mat-light-theme(mat-palette($mat-amber), mat-palette($mat-amber), mat-palette($mat-red));
+
+// $my-theme-light: mat-light-theme($my-primary, $my-accent, $my-warn);
+
+// $my-theme: mat-theme($my-primary, $my-accent, $my-warn, $my-foreground, $my-background);
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+// @include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+// @include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+// @include angular-material-typography($custom-typography);
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+
+
+
+// $custom-typography: mat-typography-config(
+//   $font-family: 'Roboto, monospace',
+//   $headline: mat-typography-level(32px, 48px, 700),
+//   $body-1: mat-typography-level(16px, 24px, 500)
+// );
+
+
+
+// $primary: mat-palette($mat-teal);
+
+// $accent: mat-palette($mat-yellow);
+
+// $mytheme: mat-light-theme($primary, $accent);
+
+// .theme{
+//     @include angular-material-theme($mytheme);
+// }

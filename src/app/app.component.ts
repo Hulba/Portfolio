@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -6,38 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  myStyle: object = {};
-  myParams: object = {};
-  width: number = 100;
-  height: number = 100;
+
   title = 'Portfolio';
 
-  ngOnInit() {
-//     this.myStyle = {
-//         'position': 'fixed',
-//         'width': '100%',
-//         'height': '100%',
-//         'z-index': -1,
-//         'top': 0,
-//         'left': 0,
-//         'right': 0,
-//         'bottom': 0,
-//     };
+  constructor ( 
+    // private overlayContainer: OverlayContainer
+    ){}
 
-// this.myParams = {
-//       particles: {
-//           number: {
-//               value: 200,
-//           },
-//           color: {
-//               value: '#ff0000'
-//           },
-//           shape: {
-//               type: 'triangle',
-//           },
-//       }
-//     };
-//   }
+  ngOnInit(): void {
+    // this.overlayContainer.th
+  }
 
-}
+  toggleTheme(){
+
+    if (document.body.classList.contains("theme-1"))
+    document.body.classList.replace("theme-1", "theme-2")
+    else document.body.classList.replace("theme-2", "theme-1")
+    
+  }
 }

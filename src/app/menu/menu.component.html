@@ -1,6 +1,12 @@
 <div>
-  <button mat-display-4 mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
+  <button mat-display-4 mat-button [matMenuTriggerFor]="menu">
+    <h2 class="uppercase">
+      <span>MY | </span>
+      <span>LINKS</span>
+    </h2>
+
+  </button>
+  <mat-menu class="menu-lg" #menu="matMenu">
     <button mat-menu-item (click)=openLinkedInProfile()>My LinkedIn Page</button>
     <button mat-menu-item (click)=openGithubProfile()>My Github Page</button>
     <button mat-menu-item (click)=openGithubRepos()>My Github Repos</button>

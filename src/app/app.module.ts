@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
 
 
@@ -20,9 +20,10 @@ import { TabsComponent } from './tabs/tabs.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    OverlayModule,
     MatTabsModule,
     MatMenuModule,
-    BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule

@@ -204,7 +204,8 @@ var pJS = function(tag_id, params){
       window.addEventListener('resize', function(){
 
           pJS.canvas.w = pJS.canvas.el.offsetWidth;
-          pJS.canvas.h = screen.height//pJS.canvas.el.offsetHeight;
+          pJS.canvas.h = pJS.canvas.el.offsetHeight; 
+          ///////////////////////////
           // console.log(pJS.canvas.h);
 
           /* resize canvas */
@@ -1029,7 +1030,8 @@ var pJS = function(tag_id, params){
   pJS.fn.modes.grabParticle = function(p){
 
     if(pJS.interactivity.events.onhover.enable && pJS.interactivity.status == 'mousemove'){
-
+      // console.log('p.y==', p.y)
+      // console.log('pJS.interactivity.mouse.pos_y==', pJS.interactivity.mouse.pos_y)
       var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
           dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
           dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
@@ -1061,8 +1063,6 @@ var pJS = function(tag_id, params){
     }
 
   };
-
-
 
   /* ---------- pJS functions - vendors ------------ */
 

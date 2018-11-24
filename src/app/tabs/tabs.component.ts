@@ -13,8 +13,8 @@ export class TabsComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleTheme(){
-    
-  }
+
+
+
 
 }
