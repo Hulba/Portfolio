@@ -2,10 +2,6 @@
 // @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500'; //works
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500'); 
 
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin-ext');
-// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&amp;subset=latin-ext');
-
-
 @include mat-core();
 
 @mixin global-theme($theme){
@@ -17,7 +13,9 @@
     body {
 
         background-color: mat-color($background, background);
-        color: mat-color($foreground, text);   
+        color: mat-color($foreground, text); 
+        width: 100vw;
+        height: 100vh;
     }
     h1:hover{
         font-size: 38px;
@@ -25,33 +23,41 @@
     }
 
     #container{
-        position: absolute;
-        z-index: -1;
+        position: inherit;
+        // z-index: -1;
         // padding:8px;
         // margin-top:5%;
-        margin-left:5%;
-        margin-right:5%;
-        margin-bottom: 0; 
+        padding-left:5%;
+        padding-right:5%;
+        padding-bottom: 0; 
     }
     canvas{
         display:block;
-        vertical-align:bottom;
-        height: 100%;
+        // vertical-align:bottom;
+        // height: 100%;
     }
     #particles-js{
         position: absolute;
-        z-index: 0;
-        width: 100%;
+        // z-index: 0;
+        width: 100vw;
         height: 100vh;
         background-color: mat-color($background, background);
         color: mat-color($foreground, text);    
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        // background-position: 50% 50%;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // -webkit-background-size: cover;
+        // -moz-background-size: cover;
+        // -o-background-size: cover;
     }
+    .buttonsDiv{
+        position: relative;
+
+        text-align: center;
+        margin-bottom: 20px;
+        // max-width: 300px;
+    }
+
 
 }
 
@@ -67,17 +73,17 @@ $theme-2: mat-light-theme(
 
 $typography-1: mat-typography-config(
     $font-family: 'Roboto, monospace',
-    $headline: mat-typography-level(32px, 48px, 500),
-    $body-1: mat-typography-level(28px, 32px, 300),
-    $button: mat-typography-level(28px, 32px, 300),
-    $display-4: mat-typography-level(28px, 32px, 300)
+    // $headline: mat-typography-level(28px, 48px, 500),
+    // $body-1: mat-typography-level(18px, 32px, 300),
+    // $button: mat-typography-level(28px, 32px, 300),
+    // $display-4: mat-typography-level(28px, 32px, 300)
 );
 $typography-2: mat-typography-config(
     $font-family: 'Roboto Condensed, sans-serif',
-    $headline: mat-typography-level(36px, 52px, 700),
-    $body-1: mat-typography-level(22px, 22px, 300),
-    $button: mat-typography-level(22px, 22px, 300),
-    $display-4: mat-typography-level(22px, 22px, 300)
+    // $headline: mat-typography-level(36px, 52px, 700),
+    // $body-1: mat-typography-level(22px, 22px, 300),
+    // $button: mat-typography-level(22px, 22px, 300),
+    // $display-4: mat-typography-level(22px, 22px, 300)
 );
 
 .theme-1{

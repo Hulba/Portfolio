@@ -3,17 +3,17 @@ const app = express();
 const path = require('path');
 
 
-app.get('/hi', (req, res) => {
-  res.send('Hello World!');
-});
+// app.get('/hi', (req, res) => {
+//   res.send('Hello World!');
+// });
 app.use(express.static(path.join(__dirname, '../dist/Portfolio')));
 
 //heroku
-const server = app.listen(process.env.PORT, () => {
+const server = app.listen(8000, () => {
   // const host = server.address().address;
   // const port = server.address().port;
 
-  console.log(`Example app listening at http://${host}:${port}`);
+  // console.log(`Example app listening at http://${host}:${port}`);
 });
 
 

@@ -1,7 +1,11 @@
-<app-menu></app-menu>
+<mat-chip-list class="buttonsDiv">
+    <button  id="test1btn" mat-raised-button (click)="toggleTheme()">Toggle Themes</button>
+    <mat-chip color="primary" selected>primary</mat-chip>
+    <mat-chip color="accent" selected>accent</mat-chip>
+    <mat-chip color="warn" selected>warn</mat-chip>
+</mat-chip-list>
+
+<app-menu ></app-menu>
 
 <app-tabs></app-tabs>
 
-<button id="test1btn" mat-raised-button (click)="toggleTheme()" color="primary">Toggle Themes - primary </button>
-<button mat-raised-button (click)="toggleTheme()" color="accent">Toggle Themes - accent </button>
-<button mat-raised-button (click)="toggleTheme()" color="warn">Toggle Themes - warn </button>
