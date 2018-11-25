@@ -6,15 +6,19 @@ const path = require('path');
 // app.get('/hi', (req, res) => {
 //   res.send('Hello World!');
 // });
-app.use(express.static(path.join(__dirname, '../dist/Portfolio')));
+
+//google
+// app.use(express.static(path.join(__dirname, '../dist/Portfolio')));
 
 //heroku
 
+//
+app.use(express.static(path.join(__dirname, '../../dist/Portfolio')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/*', (req, res)=>{
-  res.sendFile(path.join(__dirname, '../dist/Portfolio/index.html'));
+  res.sendFile(path.join(__dirname, '../../dist/Portfolio/index.html'));
 });
 var PORT = process.env.PORT || 8000;
 app.listen(PORT, ()=>{
