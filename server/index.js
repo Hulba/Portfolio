@@ -6,14 +6,19 @@ const path = require('path');
 // app.get('/hi', (req, res) => {
 //   res.send('Hello World!');
 // });
-app.use(express.static(path.join(__dirname, '../dist/Portfolio')));
+app.use(express.static(path.join(__dirname, '../dist/Portfolio/index.html')));
 
 //heroku
-const server = app.listen(process.env.PORT, () => {
-  // const host = server.address().address;
-  // const port = server.address().port;
 
-  // console.log(`Example app listening at http://${host}:${port}`);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.get('/*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../dist/Portfolio/index.html'));
+});
+var PORT = process.env.PORT || 8000;
+app.listen(PORT, ()=>{
+  console.log('server running on port:', PORT);
 });
 
 
