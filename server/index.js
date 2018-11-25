@@ -9,7 +9,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, '../dist/Portfolio')));
 
 //heroku
-const server = app.listen(8000, () => {
+const server = app.listen(process.env.PORT, () => {
   // const host = server.address().address;
   // const port = server.address().port;
 
