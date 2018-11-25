@@ -6,7 +6,7 @@ const path = require('path');
 // app.get('/hi', (req, res) => {
 //   res.send('Hello World!');
 // });
-app.use(express.static(path.join(__dirname, '../dist/Portfolio/index.html')));
+app.use(express.static(path.join(__dirname, '../dist/Portfolio')));
 
 //heroku
 
