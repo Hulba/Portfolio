@@ -54,8 +54,22 @@
         position: relative;
 
         text-align: center;
-        margin-bottom: 20px;
+        margin: 20px;
         // max-width: 300px;
+    }
+    .portItems img{
+        margin-top: 20px;
+    }
+    .portItems{
+        float: left;
+        margin: 10px;
+        max-width: 200px;
+        height: 350px;
+        box-shadow: 5px 5px 8px 5px red;
+    }
+    .vertical-bottom{
+        position: absolute;
+        bottom: 0;
     }
 
 
