@@ -9,7 +9,7 @@ import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule,
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { TabsComponent } from './tabs/tabs.component';
-
+import 'hammerjs';
 
 
 @NgModule({

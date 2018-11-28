@@ -1,15 +1,12 @@
-<mat-tab-group>
+<mat-tab-group class="tabGroup">
     <mat-tab label="About Me">
       <!-- ///////////////////////////////////// -->
       <mat-card cdkDrag *ngFor="let portItems of portItems" class="portItems">
+
         <mat-card-header>
           <mat-card-title>{{portItems.name}}</mat-card-title>
-          <!-- <mat-card-subtitle>Calories: {{recipe.calories | number:'0.0-0'}}</mat-card-subtitle> -->
         </mat-card-header>
         <img mat-card-image src="{{portItems.image}}" matTooltip="{{portItems.description}}" matTooltipPosition="above">
-        <!-- <div class="description">
-          <p>{{portItems.description}}</p>
-        </div> -->
         
         <div class="vertical-bottom">
           <mat-card-actions>
@@ -23,8 +20,6 @@
         </div>
       </mat-card>
       <!-- ///////////////////////////////////////// -->
-
-
     </mat-tab>
     <mat-tab label="Portfolio">
         <h2>h2 text</h2>

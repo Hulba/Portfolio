@@ -19,10 +19,8 @@ export class AppComponent implements OnInit{
   }
 
   toggleTheme(){
-
     if (document.body.classList.contains("theme-1"))
     document.body.classList.replace("theme-1", "theme-2")
     else document.body.classList.replace("theme-2", "theme-1")
-    
   }
 }
