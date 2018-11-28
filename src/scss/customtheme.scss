@@ -58,18 +58,27 @@
         // max-width: 300px;
     }
     .portItems img{
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .portItems{
         float: left;
         margin: 10px;
-        max-width: 200px;
-        height: 350px;
-        box-shadow: 5px 5px 8px 5px red;
+        max-width: 250px;
+        height: 500px;
+        // box-shadow: 5px 5px 8px 5px red;
     }
     .vertical-bottom{
-        position: absolute;
+        // position: relative;
         bottom: 0;
+    }
+    .description{
+        font-size: 0.8vw;
+
+    }
+    .mat-tooltip{
+        font-size: 16px !important;
+        color: mat-color($background, background);
+        background-color: mat-color($foreground, text); 
     }
 
 

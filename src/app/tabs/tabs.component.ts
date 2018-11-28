@@ -73,7 +73,7 @@ export class TabsComponent implements OnInit {
       image: 'assets/images/portitems/resp-portfolio-prev.jpg',
       github: 'https://github.com/lantanios/Responsive-Portfolio/tree/master',
       liveWeb: 'https://lantanios.github.io/Responsive-Portfolio/portfolio.html',
-      description: '.',
+      description: 'Portfolio that served me for uploading homeworks untill now.',
     }
 
   ];

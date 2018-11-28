@@ -6,12 +6,19 @@
           <mat-card-title>{{portItems.name}}</mat-card-title>
           <!-- <mat-card-subtitle>Calories: {{recipe.calories | number:'0.0-0'}}</mat-card-subtitle> -->
         </mat-card-header>
-        <img mat-card-image src="{{portItems.image}}">
+        <img mat-card-image src="{{portItems.image}}" matTooltip="{{portItems.description}}" matTooltipPosition="above">
+        <!-- <div class="description">
+          <p>{{portItems.description}}</p>
+        </div> -->
+        
         <div class="vertical-bottom">
           <mat-card-actions>
-            <a href="{{portItems.github}}" target="_blank">
-              <button mat-raised-button>Visit Source Page</button>
+            <a href="{{portItems.liveWeb}}" target="_blank">
+              <button mat-raised-button>Visit Page</button>
             </a>
+            <a href="{{portItems.github}}" target="_blank">
+                <button mat-raised-button>Visit Source Page</button>
+              </a>
           </mat-card-actions>
         </div>
       </mat-card>

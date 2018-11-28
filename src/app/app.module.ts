@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule, 
-  MatCardModule, MatChipsModule } from '@angular/material';
+  MatCardModule, MatChipsModule, MatTooltipModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -28,7 +28,8 @@ import { TabsComponent } from './tabs/tabs.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
