@@ -68,7 +68,8 @@
         max-width: 250px;
         height: 350px;
         color: mat-color($primary, 500);
-        background-color: transparent;
+        background-color: mat-color($primary, 100);
+        // background-color: transparent;
         //mat-color($primary, 100);
         // box-shadow: 5px 5px 8px 5px red;
     }

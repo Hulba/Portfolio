@@ -1,7 +1,9 @@
 @import './customtheme.scss';
 
 // @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
-
+html{
+  height: 100%;
+}
 body{
     margin: 0px;
     background-color: #426363;
@@ -10,7 +12,13 @@ body{
     // -moz-background-size: cover;
     // -o-background-size: cover;
     // background-size: cover;
-    object-fit: fill;
+    // object-fit: fill;
+    // background-repeat: no-repeat;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*
 #container{

@@ -20,14 +20,14 @@ export class TabsComponent implements OnInit {
       image: 'assets/images/portitems/diet-planner-prev.jpg',
       github: 'https://github.com/lantanios/Project_2_Angular',
       liveWeb: 'https://someplanner.herokuapp.com/',
-      description: 'This application allows users to search for recipes and store favorites with simple drag to favorites section..',
+      description: 'This application allows users to search for recipes and store favorites with simple drag to favorites section.',
     },
     {
       name: 'sequelizedBurger',
       image: 'assets/images/portitems/sequelizedBurger_prev.jpg',
       github: 'https://github.com/lantanios/sequelizedBurger',
       liveWeb: 'https://calm-citadel-84985.herokuapp.com/',
-      description: 'Simple application with frontend and backend which interacts with MySQL server(with sequelize ORM) using express server and socket.io using MVC design pattern. In frontend it is using handlebars to manipulate DOM..',
+      description: 'Simple application with frontend and backend which interacts with MySQL server(with sequelize ORM) using express server and socket.io using MVC design pattern. In frontend it is using handlebars to manipulate DOM.',
 
     },
     {
@@ -35,7 +35,7 @@ export class TabsComponent implements OnInit {
       image: 'assets/images/portitems/Giftastic_prev.jpg',
       github: 'https://github.com/lantanios/GifTastic',
       liveWeb: 'https://lantanios.github.io/GifTastic/',
-      description: "GifTastic is using giffy API and jQuery ajax for getting gif files from the API. Game is using browser's local storage to store the favorite gifs..",
+      description: "GifTastic is using giffy API and jQuery ajax for getting gif files from the API. Game is using browser's local storage to store the favorite gifs.",
 
     },
     {
@@ -50,7 +50,7 @@ export class TabsComponent implements OnInit {
       image: 'assets/images/portitems/Trivia_prev.jpg',
       github: 'https://github.com/lantanios/TriviaGame',
       liveWeb: 'https://lantanios.github.io/TriviaGame/',
-      description: 'Trivie game is using giffy API and jQuery ajax for getting gif files based on stored questions. Game counts hits and looses, whichever reaches 5 the game ends and starts from the beginning..',
+      description: 'Trivie game is using giffy API and jQuery ajax for getting gif files based on stored questions. Game counts hits and looses, whichever reaches 5 the game ends and starts from the beginning.',
 
     },
     {
@@ -58,7 +58,7 @@ export class TabsComponent implements OnInit {
       image: 'assets/images/portitems/Word-Guess-Game_prev.jpg',
       github: 'https://github.com/lantanios/Word-Guess-Game',
       liveWeb: 'https://lantanios.github.io/Word-Guess-Game/',
-      description: 'Simple game with sounds. Using HTML, CSS and Javascript..',
+      description: 'Simple game with sounds. Using HTML, CSS and Javascript.',
 
     },
     {
@@ -66,7 +66,7 @@ export class TabsComponent implements OnInit {
       image: 'assets/images/portitems/Train-scheduler_prev.jpg',
       github: 'https://github.com/lantanios/Train-scheduler',
       liveWeb: 'https://lantanios.github.io/Train-scheduler/.',
-      description: "Train scheduler is calculating next train arrival time based on first train's date/time and it's frequency..",
+      description: "Train scheduler is calculating next train arrival time based on first train's date/time and it's frequency.",
     },
     {
       name: 'Responsive Portfolio',
