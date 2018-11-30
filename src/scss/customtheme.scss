@@ -1,6 +1,4 @@
 @import '../../node_modules/@angular/material/theming';
-// @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500'; //works
-// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500'); 
 
 @include mat-core();
 
@@ -10,56 +8,38 @@
     $warn: map-get($theme, warn);
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
+    
     body {
-
-        background-color: mat-color($background, background);
-        color: mat-color($foreground, text); 
-        width: 100vw;
-        height: 100vh;
-    }
-    h1:hover{
-        font-size: 38px;
 
     }
 
     #container{
-        position: inherit;
+        // background-color: mat-color($background, background);
+        // opacity: 0.5;
+        color: mat-color($foreground, text); 
         // z-index: -1;
-        // padding:8px;
-        // margin-top:5%;
+        position: inherit;
         padding-left:5%;
         padding-right:5%;
-        padding-bottom: 0; 
     }
     canvas{
         display:block;
-        // vertical-align:bottom;
-        // height: 100%;
+
     }
     #particles-js{
+        background-color: mat-color($background, background);
         position: absolute;
-        // z-index: 0;
         width: 100vw;
         height: 100vh;
-        // background-color: mat-color($primary, A400);
-        // color: mat-color($foreground, text);    
-        // background-position: 50% 50%;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // -webkit-background-size: cover;
-        // -moz-background-size: cover;
-        // -o-background-size: cover;
     }
     .buttonsDiv{
         position: relative;
-
-        // text-align: right;
         margin: 20px;
-        // max-width: 300px;
     }
     .portItems img{
         margin-top: 10px;
         height: 50%;
+        width: 90%;
         opacity: 0.8;
     }
     .portItems{
@@ -67,42 +47,43 @@
         margin: 10px;
         max-width: 250px;
         height: 350px;
-        color: mat-color($primary, 500);
-        background-color: mat-color($primary, 100);
-        // background-color: transparent;
-        //mat-color($primary, 100);
-        // box-shadow: 5px 5px 8px 5px red;
+        text-align: center;
+
+        color: mat-color($primary, A200);
+        background-color: transparent;
+        // opacity: 0.8;
     }
     .vertical-bottom{
         position: absolute;
         bottom: 0;
     }
     .mat-raised-button{
-        color: mat-color($accent, 900);
+        color: mat-color($primary, A200);
         background-color: transparent;
     }
     .mat-tooltip{
         font-size: 16px !important;
-        color: mat-color($background, background);
+        color: mat-color($foreground, text); 
         background-color: mat-color($primary, 700); 
     }
     .mat-tab-label{
-        color: mat-color($accent, 900);
+        color: mat-color($primary, A200);
+
     }
     .menu{
-        color: mat-color($accent, 900);
+        color: mat-color($primary, A200);
     }
 
 
 }
 
-$theme-1: mat-dark-theme(
-    mat-palette($mat-light-blue), 
-    mat-palette($mat-cyan),
+$theme-1: mat-light-theme(
+    mat-palette($mat-blue), 
+    mat-palette($mat-light-blue),
     );
 $theme-2: mat-light-theme(
-    mat-palette($mat-blue), 
-    mat-palette($mat-light-blue)
+    mat-palette($mat-red), 
+    mat-palette($mat-pink)
     );
 
 
