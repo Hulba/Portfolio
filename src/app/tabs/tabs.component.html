@@ -1,20 +1,20 @@
 <mat-tab-group class="tabGroup">
-    <mat-tab label="About Me">
+    <mat-tab class="AboutMe" label="About Me">
       <!-- ///////////////////////////////////// -->
+      <mat-list>
+        <mat-list-item *ngFor="let text of bioText">
+          <h3 matLine> {{text}} </h3>
+          <!-- <p matLine>
+            <span> {{text}} </span>
+            <span class="demo-2"> -- {{text}} </span>
+          </p> -->
+          <p>{{plainText}}</p>
+        </mat-list-item>
+      </mat-list>
 
-      <div class="parallax-container">
-          <div class="parallax"><img src="assets/images/portitems/Train-scheduler_prev.jpg"></div>
-        </div>
-        <div class="section white">
-          <div class="row container">
-            <h2 class="header">Parallax</h2>
-            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-          </div>
-        </div>
-        <div class="parallax-container">
-          <div class="parallax"><img src="assets/images/portitems/Star-Wars-RPG_prev.jpg"></div>
-        </div>
-        <!-- ///////////////////////////////////////// -->
+
+
+      <!-- ///////////////////////////////////////// -->
 
     </mat-tab>
     <mat-tab label="Portfolio">
@@ -37,11 +37,11 @@
           </div>
         </mat-card>
     </mat-tab>
-    <mat-tab label="Contact">
+    <!-- <mat-tab label="Contact">
       <p class="link-cat">link</p>
 
       
-    </mat-tab>
+    </mat-tab> -->
 </mat-tab-group>
 
   

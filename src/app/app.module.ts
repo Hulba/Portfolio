@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatMenuModule, MatIconModule, MatButtonModule, 
-  MatCardModule, MatChipsModule, MatTooltipModule } from '@angular/material';
+  MatCardModule, MatChipsModule, MatTooltipModule, MatListModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -29,7 +29,8 @@ import 'hammerjs';
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,7 +29,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
         "type": "triangle",
         "stroke": {
           "width": 0,
-          "color": "#000"
+          "color": "#6c6c6cab"
         },
         "polygon": {
           "nb_sides": 5
@@ -63,7 +63,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#000",
+        "color": "#6c6c6c",
         "opacity": 0.4,
         "width": 1
       },
@@ -98,7 +98,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
         "grab": {
           "distance": 800,
           "line_linked": {
-            "opacity": 1
+            "opacity": 0.4
           }
         },
         "bubble": {
@@ -122,7 +122,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
     "retina_detect": true,
     "config_demo": {
       "hide_card": false,
-      "background_color": "#b61924",
+      "background_color": "#6c6c6cab",
       "background_image": "",
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",
