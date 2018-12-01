@@ -7,27 +7,48 @@ import { port } from './portfolio';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
-  themeClass = '';
-  portItems = port.portItems;
+  portItems = [];
   bioText = [];
-  plainText = "";
+  showAboutMe: boolean = false;
+  showPortfolio: boolean = false;
+  
   constructor() { }
 
   ngOnInit() {
+    this.AboutMe();
 
-    this.showBio();
+  }
+  
+  AboutMe(){
+    this.showAboutMe = true;
+    this.showPortfolio = false;
+    this.bioText = [];
+
+    this.slowArray(this.bioText, port.text);
 
   }
 
+  Portfolio(){
+    this.showAboutMe = false;
+    this.showPortfolio = true;
+    this.portItems = [];
+    this.slowArray(this.portItems, port.portItems);
+  }
 
-  showBio(){
-    var that = this;
-    this.bioText = [];
-    for (let i = 0; i < port.text.length; i++){
+  slowPortfolio(){
+    this.showAboutMe = false;
+    this.showPortfolio = true;
+    this.portItems = [];
+    this.slowArray(this.portItems, port.portItems);
+  }
+  
+  slowArray(emptyArr, sourceAS){
+    
+    for (let i = 0; i < sourceAS.length; i++){
 
       (function (i) {
         setTimeout(function () {
-          that.bioText.push(port.text[i]);
+          emptyArr.push(sourceAS[i]);
         }, 300*i);
       })(i);
         

@@ -65,7 +65,7 @@
     .mat-tooltip{
         font-size: 16px !important;
         color: mat-color($foreground, text); 
-        background-color: mat-color($primary, 700); 
+        background-color: mat-color($primary, A200) 
     }
     .mat-tab-label{
         color: mat-color($primary, A200);
@@ -82,6 +82,11 @@
         display:inline-block;
         padding: 10px;
         opacity: 0.9;
+    }
+    .portCards{
+        border: 1px solid mat-color($primary, 900);
+        box-shadow: 0px 12px 8px 5px;
+        // display:inline-block;
     }
 
 
