@@ -11,11 +11,9 @@ export class AppComponent implements OnInit{
   title = 'Portfolio';
 
   constructor ( 
-    // private overlayContainer: OverlayContainer
     ){}
 
   ngOnInit(): void {
-    // this.overlayContainer.th
   }
 
   toggleTheme(){

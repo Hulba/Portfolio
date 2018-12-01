@@ -76,16 +76,16 @@
     }
     .h3Bio{
         margin: 1em;
-        color: mat-color($primary, A200);
+        color: mat-color($primary, 600);
         border: 1px solid mat-color($primary, 900);
-        box-shadow: 0px 12px 8px 5px;
+        box-shadow: 0px 12px 8px 5px mat-color($primary, 100);
         display:inline-block;
         padding: 10px;
         opacity: 0.9;
     }
     .cardWrapper{
         border: 1px solid mat-color($primary, 900);
-        box-shadow: 12px 0px 8px 5px;
+        box-shadow: 12px 0px 8px 5px mat-color($primary, 200);
         height: 90%;
         width: 90%;
     }
@@ -96,10 +96,11 @@
 $theme-1: mat-light-theme(
     mat-palette($mat-blue), 
     mat-palette($mat-light-blue),
+    
     );
 $theme-2: mat-light-theme(
-    mat-palette($mat-red), 
-    mat-palette($mat-pink)
+    mat-palette($mat-deep-purple), 
+    mat-palette($mat-purple)
     );
 
 
