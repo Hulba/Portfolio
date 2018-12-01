@@ -1,12 +1,12 @@
-<button mat-raised-button (click)="AboutMe()">AboutMe</button>
-<button mat-raised-button (click)="Portfolio()">Portfolio</button>
+<button mat-raised-button class="h3Bio" (click)="AboutMe()">AboutMe</button>
+<button mat-raised-button class="h3Bio" (click)="Portfolio()">Portfolio</button>
 <div *ngIf="showAboutMe">
   <div *ngFor="let text of bioText">
     <h4 class="h3Bio" matLine>{{text}}</h4>
   </div>
 </div>
 <div *ngIf="showPortfolio">
-  <mat-card class="portCards" cdkDrag *ngFor="let portItems of portItems" class="portItems">
+  <mat-card cdkDrag *ngFor="let portItems of portItems" class="portItems">
     <div class="cardWrapper">
       <mat-card-header>
         <mat-card-title>{{portItems.name}}</mat-card-title>
