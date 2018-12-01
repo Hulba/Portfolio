@@ -9,8 +9,8 @@
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
     
-    body {
-
+    html,body {
+        height: 100%;
     }
 
     #container{
@@ -22,6 +22,7 @@
         padding-left:5%;
         padding-right:5%;
     }
+    
     canvas{
         display:block;
 
@@ -29,8 +30,8 @@
     #particles-js{
         // background-color: mat-color($background, background);
         position: absolute;
-        width: 100vw;
-        height: 100vh;
+        width: 98vw;
+        height: 98vh;
     }
     .buttonsDiv{
         position: relative;
@@ -88,18 +89,11 @@ $theme-2: mat-light-theme(
 
 
 $typography-1: mat-typography-config(
-    $font-family: 'Roboto, monospace',
-    // $headline: mat-typography-level(28px, 48px, 500),
-    // $body-1: mat-typography-level(18px, 32px, 300),
-    // $button: mat-typography-level(28px, 32px, 300),
-    // $display-4: mat-typography-level(28px, 32px, 300)
+    $font-family: 'Roboto, monospace'
 );
 $typography-2: mat-typography-config(
     $font-family: 'Roboto Condensed, sans-serif',
-    // $headline: mat-typography-level(36px, 52px, 700),
-    // $body-1: mat-typography-level(22px, 22px, 300),
-    // $button: mat-typography-level(22px, 22px, 300),
-    // $display-4: mat-typography-level(22px, 22px, 300)
+    $display-4: mat-typography-level(18px, 26px, 500)
 );
 
 .theme-1{
@@ -113,45 +107,3 @@ $typography-2: mat-typography-config(
     @include angular-material-typography($typography-2);
     @include global-theme($theme-2);
 }
-
-
-// $background: map-get($my-theme-default, background);
-// $background: map_merge($background, (background: $my-background));
-// $my-theme-default: map_merge($my-theme-default, (background: $background));
-
-// $my-theme-light: mat-light-theme(mat-palette($mat-amber), mat-palette($mat-amber), mat-palette($mat-red));
-
-// $my-theme-light: mat-light-theme($my-primary, $my-accent, $my-warn);
-
-// $my-theme: mat-theme($my-primary, $my-accent, $my-warn, $my-foreground, $my-background);
-// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
-// @include mat-base-typography($custom-typography);
-
-// Override typography for a specific Angular Material components.
-// @include mat-checkbox-typography($custom-typography);
-
-// Override typography for all Angular Material, including mat-base-typography and all components.
-// @include angular-material-typography($custom-typography);
-
-// Define a custom typography config that overrides the font-family as well as the
-// `headlines` and `body-1` levels.
-
-
-
-// $custom-typography: mat-typography-config(
-//   $font-family: 'Roboto, monospace',
-//   $headline: mat-typography-level(32px, 48px, 700),
-//   $body-1: mat-typography-level(16px, 24px, 500)
-// );
-
-
-
-// $primary: mat-palette($mat-teal);
-
-// $accent: mat-palette($mat-yellow);
-
-// $mytheme: mat-light-theme($primary, $accent);
-
-// .theme{
-//     @include angular-material-theme($mytheme);
-// }

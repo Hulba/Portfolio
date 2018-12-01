@@ -1,18 +1,8 @@
 <mat-tab-group class="tabGroup">
     <mat-tab class="AboutMe" label="About Me">
-      <!-- ///////////////////////////////////// -->
-      <!-- <mat-list> -->
-        <!-- <mat-list-item *ngFor="let text of bioText"> -->
-        <div class="h3Bio" *ngFor="let text of bioText">
-          <h4 matLine>{{text}}</h4>
-        </div>
-        <!-- </mat-list-item> -->
-      <!-- </mat-list> -->
-
-
-
-      <!-- ///////////////////////////////////////// -->
-
+      <div class="h3Bio" *ngFor="let text of bioText">
+        <h4 matLine>{{text}}</h4>
+      </div>
     </mat-tab>
     <mat-tab label="Portfolio">
       <mat-card cdkDrag *ngFor="let portItems of portItems" class="portItems">
