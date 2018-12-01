@@ -17,7 +17,6 @@ export class TabsComponent implements OnInit {
 
     this.showBio();
 
-    // this.showBioStep()
   }
 
 
@@ -35,23 +34,6 @@ export class TabsComponent implements OnInit {
     }
   }
 
-  showBioStep(){
-    var that = this;
-
-    for (let i = 0; i < port.text.length; i++){
-
-      for (let t = 0; t < port.text[i].length; t++){
-        (function (t) {
-          setTimeout(function () {
-            that.plainText += port.text[i].charAt(t);
-            console.log(port.text[i].charAt(t));
-
-          // that.bioText[i].push(port.text[i].charAt(t));  
-          }, 100*t);
-        })(t);
-      }
-    }
-  }
 
 
 }
