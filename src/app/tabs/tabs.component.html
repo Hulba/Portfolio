@@ -1,7 +1,7 @@
 <mat-tab-group class="tabGroup">
     <mat-tab class="AboutMe" label="About Me">
-      <div class="h3Bio" *ngFor="let text of bioText">
-        <h4 matLine>{{text}}</h4>
+      <div *ngFor="let text of bioText">
+        <h4 class="h3Bio" matLine>{{text}}</h4>
       </div>
     </mat-tab>
     <mat-tab label="Portfolio">
