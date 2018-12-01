@@ -11,6 +11,10 @@
     
     html,body {
         height: 100%;
+        
+    }
+    body{
+
     }
 
     #container{
@@ -111,7 +115,6 @@
 $theme-1: mat-light-theme(
     mat-palette($mat-blue), 
     mat-palette($mat-light-blue),
-    
     );
 $theme-2: mat-light-theme(
     mat-palette($mat-deep-purple), 

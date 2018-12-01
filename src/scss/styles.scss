@@ -4,6 +4,8 @@ html{
   // height: 100%;
 }
 body{
+    // background: url('../assets/images/portitems/Star-Wars-RPG_prev.jpg');
+
     // margin: 0px;
     // background-color: #f7fdfd;
     // background-image: url('../assets/images/background1.jpg');
@@ -11,4 +13,37 @@ body{
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
+    // width: 200px;
+    // height: 200px;
+    display: block;
+    position: relative;
+}
+// div {
+//   width: 200px;
+//   height: 200px;
+//   display: block;
+//   position: relative;
+// }
+
+
+.AboutMe {
+  // width: 200px;
+  // height: 200px;
+  display: block;
+  position: relative;
+}
+
+.AboutMe::after {
+  content: "";
+  background: url('../assets/images/profile-transparent-sm-inverted.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
