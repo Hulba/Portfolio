@@ -78,7 +78,12 @@
         height: 90%;
         width: 90%;
     }
-
+    .email{
+        margin-left: 20px;
+        font-style: italic;
+        font-size: 20px;
+        color: mat-color($primary, 400);
+    }
 
 
 
@@ -120,6 +125,7 @@
         margin-left: 1.5%;
         width: 8%;
     }
+
 
 }
 
