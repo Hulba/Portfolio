@@ -1,6 +1,5 @@
 export const port = {
     text: [
-        "Hi, I'm Giorgi - Motivated to change the world.",
         "1995-1996 computer classes Windows and MS-Dos.",
         "2000-2002 Karlsruhe Institute of Technology - Informatics.",
         "2006-2006 C++ privete lessons.",
@@ -15,7 +14,7 @@ export const port = {
         "Was used on highly important cases in the ministry of internal affairs (legally and with court orders) until 2012 when after government change, I was arrested for developing it. ",
         "This arrest had only political reason, the new government wanted me to give false testimony against their predecessors and they didn't want to hear that there was nothing that I could help them with. ",
         "I was justified by the court.",
-        "Now, I'm here learning web develeopement :)",
+        "Trying to stay out of politics and learning web develeopement :)",
     ],
     portItems: [
         {
