@@ -26,7 +26,7 @@ export const port = {
         },
         {
         name: 'Diet Planner',
-        image: 'assets/images/portitems/diet-planner-prev.jpg',
+        image: 'assets/images/portitems/diet-planner-prev.gif',
         github: 'https://github.com/lantanios/Project_2_Angular',
         liveWeb: 'https://someplanner.herokuapp.com/',
         description: 'This application allows users to search for recipes and store favorites with simple drag to favorites section.',
