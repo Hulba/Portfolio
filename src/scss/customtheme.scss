@@ -13,17 +13,12 @@
         height: 100%;
         
     }
-    body{
-
-    }
-
     #container{
         color: mat-color($foreground, text); 
         position: inherit;
         padding-left:5%;
         padding-right:5%;
     }
-    
     canvas{
         display:block;
 
@@ -37,9 +32,6 @@
         position: relative;
         margin: 20px;
     }
-    #test1btn:hover{
-        box-shadow: 0px 12px 8px 5px mat-color($primary, 300);
-    }
     .portItems img{
         margin-top: 10px;
         height: 50%;
@@ -50,16 +42,16 @@
         float: left;
         margin: 20px;
         padding: 0px;
-        max-width: 300px;
-        height: 380px;
+        width: 300px;
+        height: 350px;
         text-align: center;
         color: mat-color($primary, A200);
         background-color: transparent;
     }
-
     .vertical-bottom{
         // position: absolute;
-        bottom: 5px;
+        // bottom: 30px;
+        // align-content: center;
     }
     .mat-raised-button{
         color: mat-color($primary, A200);
@@ -73,42 +65,55 @@
     }
     .mat-tab-label{
         color: mat-color($primary, 900);
-
     }
     .menu{
         color: mat-color($primary, A200);
     }
-    .menu button:hover{
-        // background-color: mat-color($primary, 100);
-        box-shadow: 0px 12px 8px 5px mat-color($primary, 200);
+    .h3Bio{
+        color: mat-color($primary, A400);
+        display:inline-block;
+        opacity: 0.9;
+    }
+    .cardWrapper{
+        height: 90%;
+        width: 90%;
+    }
 
 
+
+
+
+}
+
+@mixin mixin-1($theme){
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    .mBtn:hover{
+        box-shadow: 0px 12px 8px 5px mat-color($primary, 300);
+    }
+    .h3Bio{
+        box-shadow: 0px 12px 8px 5px mat-color($primary, 100);
     }
     .h3Bio:hover{
         box-shadow: 0px 12px 8px 5px mat-color($primary, 300);
-
+    }
+    .menu button:hover{
+        box-shadow: 0px 12px 8px 5px mat-color($primary, 200);
     }
     .h3Bio{
         margin: 1em;
-        color: mat-color($primary, A400);
-        box-shadow: 0px 12px 8px 5px mat-color($primary, 100);
-        // text-shadow: 1px 1px mat-color($accent, 100);
-
-        display:inline-block;
         padding: 10px;
-        opacity: 0.9;
-        
     }
     .cardWrapper{
         border: 1px solid mat-color($primary, 900);
         box-shadow: 12px 0px 8px 5px mat-color($primary, 200);
-        height: 90%;
-        width: 90%;
         padding-top: 10px;
     }
     .cardWrapper:hover{
         box-shadow: 12px 0px 8px 5px mat-color($primary, 400);
-
     }
     .me-sm{
         border-radius: 50%;
@@ -116,17 +121,39 @@
         width: 8%;
     }
 
+}
 
+@mixin mixin-2($theme){
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    .portItems{
+        border: 2px solid black;
+    }
+    .me-sm{
+        border-radius: 50%;
+        margin-left: 1.5%;
+        width: 6%;
+    }
+    .mat-card-header-text{
+        margin-top: 10px;
+    }
+    .portItems{
+        margin: 30px;
+        margin-left: 0px;
+    }
 }
 
 $theme-1: mat-light-theme(
     mat-palette($mat-blue), 
     mat-palette($mat-light-blue),
-    );
+);
 $theme-2: mat-light-theme(
     mat-palette($mat-deep-purple), 
     mat-palette($mat-purple)
-    );
+);
 
 
 $typography-1: mat-typography-config(
@@ -144,6 +171,7 @@ $typography-2: mat-typography-config(
 .theme-1{
     @include angular-material-theme($theme-1);
     @include global-theme($theme-1);
+    @include mixin-1($theme-1);
     @include angular-material-typography($typography-1);
 
 }
@@ -152,4 +180,5 @@ $typography-2: mat-typography-config(
     @include angular-material-theme($theme-2);
     @include angular-material-typography($typography-2);
     @include global-theme($theme-2);
+    @include mixin-2($theme-2);
 }
