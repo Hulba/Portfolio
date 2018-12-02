@@ -1,6 +1,6 @@
 export const port = {
     text: [
-        "1995-1996 computer classes Windows and MS-Dos.",
+        "1995-1996 computer classes Windows and MS-DOS.",
         "2000-2002 Karlsruhe Institute of Technology - Informatics.",
         "2006-2006 C++ privete lessons.",
         "Meanwhile 1996-2004 Bachelor of Economics & Master of Banking.",

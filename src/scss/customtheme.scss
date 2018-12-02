@@ -11,7 +11,6 @@
     
     html,body {
         height: 100%;
-        
     }
     #container{
         color: mat-color($foreground, text); 
@@ -48,11 +47,6 @@
         color: mat-color($primary, A200);
         background-color: transparent;
     }
-    .vertical-bottom{
-        // position: absolute;
-        // bottom: 30px;
-        // align-content: center;
-    }
     .mat-raised-button{
         color: mat-color($primary, A200);
         background-color: transparent;
@@ -73,6 +67,8 @@
         color: mat-color($primary, A400);
         display:inline-block;
         opacity: 0.9;
+        margin: 0.25em;
+        padding: 7px;
     }
     .cardWrapper{
         height: 90%;
@@ -84,10 +80,33 @@
         font-size: 20px;
         color: mat-color($primary, 400);
     }
-
-
-
-
+    @media (max-width: 1080px) {
+        .portItems{
+            box-sizing: content-box;
+            float: left;
+            padding: 0px;
+            width: 45%;
+            height: 350px;
+            text-align: center;
+            color: mat-color($primary, A200);
+            background-color: transparent;
+        }
+    }
+    @media (max-width: 640px) {
+        .portItems{
+            box-sizing: content-box;
+            clear: left;
+            padding: 0px;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            color: mat-color($primary, A200);
+            background-color: transparent;
+        }
+        .vertical-bottom{
+            overflow: hidden;
+        }
+    }
 }
 
 @mixin mixin-1($theme){
@@ -108,10 +127,6 @@
     .menu button:hover{
         box-shadow: 0px 12px 8px 5px mat-color($primary, 200);
     }
-    .h3Bio{
-        margin: 1em;
-        padding: 10px;
-    }
     .cardWrapper{
         border: 1px solid mat-color($primary, 900);
         box-shadow: 12px 0px 8px 5px mat-color($primary, 200);
@@ -125,8 +140,10 @@
         margin-left: 1.5%;
         width: 8%;
     }
-
-
+    .h3Bio{
+        margin: 1em;
+        padding: 10px;
+    }
 }
 
 @mixin mixin-2($theme){
@@ -147,8 +164,10 @@
         margin-top: 10px;
     }
     .portItems{
+        text-align: center;
         margin: 30px;
         margin-left: 0px;
+        height: 270px;
     }
 }
 
