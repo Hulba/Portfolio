@@ -92,7 +92,7 @@
         margin: 1em;
         color: mat-color($primary, A400);
         box-shadow: 0px 12px 8px 5px mat-color($primary, 100);
-        text-shadow: 1px 1px mat-color($accent, 100);
+        // text-shadow: 1px 1px mat-color($accent, 100);
 
         display:inline-block;
         padding: 10px;
@@ -109,7 +109,11 @@
         box-shadow: 12px 0px 8px 5px mat-color($primary, 400);
 
     }
-
+    .me-sm{
+        border-radius: 50%;
+        margin-left: 1.5%;
+        width: 8%;
+    }
 
 
 }
@@ -125,17 +129,22 @@ $theme-2: mat-light-theme(
 
 
 $typography-1: mat-typography-config(
-    $font-family: 'Roboto, monospace'
+    $font-family: 'Roboto, monospace',
+    $headline: mat-typography-level(32px, 48px, 500),
+    $subheading-1: mat-typography-level(28px, 32px, 300),
+    $button: mat-typography-level(24px, 32px, 300),
+    $display-4: mat-typography-level(28px, 32px, 300)
+
 );
 $typography-2: mat-typography-config(
     $font-family: 'Roboto Condensed, sans-serif',
-    $display-4: mat-typography-level(18px, 26px, 500)
 );
 
 .theme-1{
     @include angular-material-theme($theme-1);
-    @include angular-material-typography($typography-1);
     @include global-theme($theme-1);
+    @include angular-material-typography($typography-1);
+
 }
 
 .theme-2{

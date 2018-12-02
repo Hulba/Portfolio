@@ -2,7 +2,7 @@
 <button mat-raised-button class="h3Bio" (click)="Portfolio()">Portfolio</button>
 <div class="AboutMe" *ngIf="showAboutMe">
   <div *ngFor="let text of bioText">
-    <h4 class="h3Bio" matLine>{{text}}</h4>
+    <h3 class="h3Bio" matLine>{{text}}</h3>
   </div>
 </div>
 <div *ngIf="showPortfolio">
