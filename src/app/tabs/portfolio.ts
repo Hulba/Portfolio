@@ -18,6 +18,13 @@ export const port = {
     ],
     portItems: [
         {
+        name: 'News Scraper',
+        image: 'assets/images/portitems/news-scraper.gif',
+        github: 'https://github.com/lantanios/mongoHeadlines',
+        liveWeb: 'https://eemca.herokuapp.com/',
+        description: 'Application is scraping data from www.npr.org, storing it in mongo database and displays it using express-handlebars from the backend.',
+        },
+        {
         name: 'Star-Wars-RPG',
         image: 'assets/images/portitems/Star-Wars-RPG_prev.jpg',
         github: 'https://github.com/lantanios/Star-Wars-RPG',
