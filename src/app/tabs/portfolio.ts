@@ -18,6 +18,13 @@ export const port = {
     ],
     portItems: [
         {
+        name: 'Memory Game',
+        image: 'assets/images/portitems/MemoryGame-prev.gif',
+        github: 'https://github.com/lantanios/MemoryGame',
+        liveWeb: 'https://memorizze.herokuapp.com/',
+        description: 'Click each image only once to increase the score. High score will be saved in mongo database.',
+        },
+        {
         name: 'News Scraper',
         image: 'assets/images/portitems/news-scraper.gif',
         github: 'https://github.com/lantanios/mongoHeadlines',
