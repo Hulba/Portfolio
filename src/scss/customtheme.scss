@@ -12,6 +12,13 @@
     html,body {
         height: 100%;
     }
+    *{
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+    }
     #container{
         color: mat-color($foreground, text); 
         position: inherit;
@@ -30,6 +37,18 @@
     .buttonsDiv{
         position: relative;
         margin: 20px;
+    }
+    .imageEmail{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+    }
+    .email{
+        // margin-left: 20px;
+        font-style: italic;
+        font-size: 20px;
+        color: mat-color($primary, 400);
     }
     .portItems img{
         margin-top: 10px;
@@ -74,12 +93,7 @@
         height: 90%;
         width: 90%;
     }
-    .email{
-        margin-left: 20px;
-        font-style: italic;
-        font-size: 20px;
-        color: mat-color($primary, 400);
-    }
+
     @media (max-width: 1080px) {
         .portItems{
             box-sizing: content-box;
@@ -93,6 +107,12 @@
         }
     }
     @media (max-width: 640px) {
+
+        .imageEmail{
+            position: relative;
+            display: block;
+            margin-left: 10%;
+        }
         .portItems{
             box-sizing: content-box;
             clear: left;
@@ -105,6 +125,11 @@
         }
         .vertical-bottom{
             overflow: hidden;
+        }
+        .me-sm{
+            border-radius: 50%;
+            margin-left: 1.5%;
+            width: 30%;
         }
     }
 }
@@ -138,11 +163,53 @@
     .me-sm{
         border-radius: 50%;
         margin-left: 1.5%;
-        width: 8%;
+        width: 50%;
     }
     .h3Bio{
         margin: 1em;
         padding: 10px;
+    }
+    @media (max-width: 1080px) {
+        .portItems{
+            box-sizing: content-box;
+            float: left;
+            padding: 0px;
+            width: 45%;
+            height: 350px;
+            text-align: center;
+            color: mat-color($primary, A200);
+            background-color: transparent;
+        }
+    }
+    @media (max-width: 640px) {
+
+        .imageEmail{
+            position: relative;
+            display: block;
+            margin-left: 10%;
+        }
+        .portItems{
+            box-sizing: content-box;
+            clear: left;
+            padding: 0px;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            color: mat-color($primary, A200);
+            background-color: transparent;
+        }
+        .vertical-bottom{
+            overflow: hidden;
+        }
+        .me-sm{
+            border-radius: 50%;
+            margin-left: 1.5%;
+            width: 30%;
+        }
+        .h3Bio{
+            margin: 0.1em;
+            padding: 2px;
+        }
     }
 }
 
@@ -157,8 +224,8 @@
     }
     .me-sm{
         border-radius: 50%;
-        margin-left: 1.5%;
-        width: 6%;
+        // margin-left: 1.5%;
+        width: 30%;
     }
     .mat-card-header-text{
         margin-top: 10px;
@@ -168,6 +235,48 @@
         margin: 30px;
         margin-left: 0px;
         height: 270px;
+    }
+    @media (max-width: 1080px) {
+        .portItems{
+            box-sizing: content-box;
+            float: left;
+            padding: 0px;
+            width: 45%;
+            height: 350px;
+            text-align: center;
+            color: mat-color($primary, A200);
+            background-color: transparent;
+        }
+    }
+    @media (max-width: 640px) {
+
+        .imageEmail{
+            position: relative;
+            display: block;
+            margin-left: 10%;
+        }
+        .portItems{
+            box-sizing: content-box;
+            clear: left;
+            padding: 0px;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            color: mat-color($primary, A200);
+            background-color: transparent;
+        }
+        .vertical-bottom{
+            overflow: hidden;
+        }
+        .me-sm{
+            border-radius: 50%;
+            margin-left: 1.5%;
+            width: 30%;
+        }
+        .h3Bio{
+            margin: 0.1em;
+            padding: 2px;
+        }
     }
 }
 

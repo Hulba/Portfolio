@@ -1,6 +1,11 @@
 <button mat-raised-button class="h3Bio" (click)="AboutMe()">AboutMe</button>
 <button mat-raised-button class="h3Bio" (click)="Portfolio()">Portfolio</button>
 
+<div class="imageEmail">
+  <img src="/assets/images/me-sm.jpg" class="me-sm">
+  <p class="email">lantareg@gmail.com</p>
+</div>
+
 <div class="AboutMe" *ngIf="showAboutMe">
   <div *ngFor="let text of bioText">
     <h3 class="h3Bio" matLine>{{text}}</h3>
