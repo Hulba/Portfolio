@@ -16,7 +16,7 @@ app.use(express.json());
 app.get('/*', (req, res)=>{
   res.sendFile(path.join(__dirname, '../dist/Portfolio/index.html'));
 });
-var PORT = process.env.PORT || 8001;
+var PORT = process.env.PORT || 80;
 app.listen(PORT, ()=>{
   console.log('server running on port:', PORT);
 });
